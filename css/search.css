@@ -1,0 +1,89 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+h2 {
+    color: #3b50ce
+;
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="submit"], button {
+    padding: 8px;
+    margin: 5px;
+    border: 2px solid #424242;
+    border-radius: 4px;
+}
+.search-btn {
+background-color: #0a8f08; /* Blue */
+border: none;
+color: white;
+padding: 8px 24px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+border: 2px solid #424242;
+font-size: 16px;
+margin: 5px;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect */
+.search-btn:hover {
+background-color: #2baf2b; /* Darker shade of blue on hover */
+}
+.cancel-btn {
+background-color:  #e51c23; /* Red */
+border: none;
+color: white;
+padding: 8px 24px;
+text-align: center;
+text-decoration: none;
+border: 2px solid #424242;
+display: inline-block;
+font-size: 16px;
+margin: 5px;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect */
+.cancel-btn:hover {
+background-color: #e84e40; /* Darker shade of red on hover */
+}
+.register-btn {
+background-color: #2a36b1; /* Green */
+border: none;
+color: white;
+padding: 10px 24px;
+text-align: center;
+border: 2px solid #424242;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 10px auto; /* Adjust margin as needed */
+display: block;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect */
+.register-btn:hover {
+background-color: #455ede; /* Darker shade of green on hover */
+}
+.form-container {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+.button-container {
+display: flex;
+justify-content: center;
+margin-top: 10px; /* Adjust margin as needed */
+}
+

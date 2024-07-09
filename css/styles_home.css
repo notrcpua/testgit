@@ -1,0 +1,285 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.navigation {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: #2c3e50;
+  transition: width 0.3s;
+}
+
+.navigation.active {
+  width: 60px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background: #1abc9c;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.navigation ul li a .icon {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.navigation ul li a .title {
+  font-size: 1em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.main {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s, width 0.3s;
+}
+
+.main.active {
+  width: calc(100% - 60px);
+  margin-left: 60px;
+}
+
+.topbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  background: #ddd;
+}
+
+.search ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2em;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cardBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  width: 48%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .numbers {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+.card .cardName {
+  color: #777;
+  margin-top: 5px;
+}
+
+.card .iconBx {
+  font-size: 3em;
+  color: #555;
+}
+
+.card .iconBx ion-icon {
+  font-size: 3em;
+}
+
+.nav-image {
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Ensures the image covers the dimensions while maintaining aspect ratio */
+  border-radius: 50%; /* Optional: makes the image circular */
+}
+
+.details {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details .recentOrders,
+.details .recentCustomers {
+  width: 48%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details .cardHeader h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+.details .btn {
+  background: #1abc9c;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.details .btn:hover {
+  background: #16a085;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details table thead td {
+  font-weight: 600;
+}
+
+.details table tr td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.details table tr td h4 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+.details table tr td .status {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.details table tr td .status.delivered {
+  background: #1abc9c;
+}
+
+.details table tr td .status.pending {
+  background: #e67e22;
+}
+
+.details table tr td .status.return {
+  background: #e74c3c;
+}
+
+.details table tr td .status.inProgress {
+  background: #f39c12;
+}
+
+.details .recentCustomers table img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.details .recentCustomers table td {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.details .recentCustomers table td h4 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.2em;
+}

@@ -1,0 +1,79 @@
+
+<div class="columns posts">
+<span class="title">วิดีโอประชาสัมพันธ์<a href="#" title="Explore More"><i class="fa fa-share"></i></a></span>
+<section class="services-section spad"></section>
+<script>
+        window.addEventListener('load', (event) => {
+            let prelodeElement = document.getElementById("preloder");
+            prelodeElement.remove()
+            // console.log('page is fully loaded');
+        });
+    </script>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <?php
+    $sql_abouts = "SELECT * FROM new_video_tbl ORDER BY video_id DESC  ";  //เรียกข้อมูลมาแสดงทั้งหมด
+    $result_abouts = mysqli_query($conn, $sql_abouts);
+    ?>
+
+    
+        <div class="container">
+            <div class="row">
+
+
+                <?php
+                $i = 1;
+                while ($row_abouts = mysqli_fetch_array($result_abouts)) {
+                    //echo $row_news['new_pic']."<br>";
+                    if ($i == 1) {
+                ?>
+                        <div class="col-lg-3 col-md-5 col-sm-6 text-center">
+                            <div class="services-item bg-white rounded shadow-sm">
+                                <video width="250" height="250" class="img-fluid card-img-top" controls>
+                                    <source src="./backend/new_video/<?php echo $row_abouts['video_link'] ?> ">
+                                </video>
+                                <!-- <h5><a style="color: #A2640B" href="prd2.php?id=<?php echo $row_abouts[0]; ?>"><?php echo $row_abouts['about_topic']; ?></a></h5> -->
+                                <div id="mylayout_2">
+                                    <p><?php echo $row_abouts['video_name'] ?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php } else { ?>
+                        <div class="col-lg-3 col-md-5 col-sm-6 text-center">
+                            <div class="services-item bg-white rounded shadow-sm">
+                                <video width="250" height="250" class="img-fluid card-img-top" controls>
+                                    <source src="./backend/new_video/<?php echo $row_abouts['video_link'] ?> ">
+                                </video>
+                                <!-- <h5><a style="color: #A2640B" href="prd2.php?id=<?php echo $row_abouts[0]; ?>"><?php echo $row_abouts['about_topic']; ?></a></h5> -->
+                                <div id="mylayout_2">
+                                    <p><?php echo $row_abouts['video_name'] ?></p>
+                                </div>
+                            </div>
+                        </div>
+                <?php }
+                    $i++;
+                } ?>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
